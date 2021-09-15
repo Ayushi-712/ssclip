@@ -1,0 +1,17 @@
+Package: ssclip
+Type: Package
+Title: SAMPLE SIZE REQUIRED TO TARGET PRECISE ESTIMATES OF PREDICTIVE PERFORMANCE
+Version: 0.1.0
+Authors@R: c(person(given = c("Ayushi"), email = "ayushi.na@thsti.res.in", role = c("aut", "trl", "cre")),
+    person(given = c("Aryabhata Datascience and AI Program at THSTI (ADAPT)"),role = c("cph") ))
+Maintainer: Ayushi <ayushisachan97@gmail.com>
+Description: Functions to determine the minimum sample size for external validation of clinical prediction models.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: gt,tidyverse,stats,scales
+Suggests: devtools,roxygen2
+RoxygenNote: 7.1.2
+
+
+
