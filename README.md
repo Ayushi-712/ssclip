@@ -30,52 +30,43 @@ devtools::install_github("Ayushi-712/ssclip")
 library(ssclip)
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
 ```
+#### Output
+![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/ss_R2val.png)
+
 #### for different combinations of parameters one can pass a vector instead of single value.
 ```
 ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
 ```
-2.  Precise estimate of CITL(calibration-in-the-large)
+#### Output
+![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/ss_R2val_diff_comb.png)
 
+### 2.Precise estimate of CITL(calibration-in-the-large)
+#### Eg. To target SE of CITL model of 2.55 (width = 10)at 95% confidence interval , Assuming R2 CITL = R2val = 0.5 and variance of the observed Yi is 400
 ```{r example }
-
-# Eg. To target SE of CITL model of 2.55 (width = 10)at 95% confidence interval , Assuming R2 CITL = R2val = 0.5 and variance of the observed Yi is 400
-
 ss_citl( R2= 0.5,width = 10,alpha = 0.05, varY = 400)
+```
+### 3. Precise estimate of calibration slope
+#### Eg. Sample size to target a 95% confidence interval for 𝜆cal that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1, the confidence interval would be 0.9 to 1.1 assuming confidence intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5
 
 ```
-3. Precise estimate of calibration slope
-
-```
-# Eg. Sample size to target a 95% confidence interval for 𝜆cal that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1, the confidence interval would be 0.9 to 1.1 assuming confidence intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5
-
 ss_cal_slope( R2= 0.5,width = 0.2,alpha = 0.05, lambda = 1)
-
 ```
-![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/ss_cal_slope.png)
-
-4. Precise estimates of residual variances (small multiplicative margin of error (MMOE) around the true value)
+### 4. Precise estimates of residual variances (small multiplicative margin of error (MMOE) around the true value)
+#### Eg.Sample size for margin of error of within 10% (1.0 <=MMOE <=1.1) of the true value at 95% confidence level.
 ```
-#Eg.Sample size for margin of error of within 10% (1.0 <=MMOE <=1.1) of the true value at 95% confidence level.
-
 ss_res_var( max_MOE=1.1, alpha=0.05)
 ```
 ## Examples (For dichotomous outcome)
-5. To target sensitivity
+### 5. To target sensitivity
+#### Eg .To target 80% sensitivity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
 
 ```
-#Eg .To target 80% sensitivity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
-
 ss_sens( alpha=0.05, se= 0.8, d=0.05,prev=0.3)
-
 ```
-6.To target specificity
-
+### 6.To target specificity
+#### Eg .To target 50% specificity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
 ```
-Eg .To target 50% specificity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
-
 ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
-
 ```
 ## References
-
 1. Archer L, Snell KIE, Ensor J, Hudda MT, Collins GS, Riley RD. Minimum sample size for external validation of a clinical prediction model with a continuous outcome. Stat Med. 2020;40:133-46.
