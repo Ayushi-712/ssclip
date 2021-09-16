@@ -11,7 +11,7 @@ There are 6 functions to target different criteria of predictive performance:
  1. R2 :The proportion of variance explained.
  2. Calibration-in-the-large(CITL) :  Agreement between predicted and observed outcome values on average.
  3. Calibration slope : agreement between predicted and observed values across the range of predicted values.
- 4. Residual variances :To target variance of observed outcome values.
+ 4. Residual variances(small multiplicative margin of error (MMOE) around the true value) :To target variance of observed outcome values.
  5. Sensitivity : To target model's ability to predict true positives in the dichotomous outcome
  6. Specificity : To target model's ability to predict true negatives in the dichotomous outcome
 
@@ -23,7 +23,7 @@ You can install the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("Ayushi-712/ssclip")
 ```
-## Example
+## Example (For continuous outcome)
 1.Precise estimate of R2val
 
 ```{r example }
@@ -49,13 +49,38 @@ ss_citl( R2= 0.5,width = 10,alpha = 0.05, varY = 400)
 
 ```
 3. Precise estimate of calibration slope
-```
 
-****# Eg. Sample size to target a 95% confidence interval for 𝜆cal
-**
+```
+# Eg. Sample size to target a 95% confidence interval for 𝜆cal
 # that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1,
 # the confidence interval would be 0.9 to 1.1 assuming confidence
-# intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5 .**
+# intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5
 ss_cal_slope( R2= 0.5,width = 0.2,alpha = 0.05, lambda = 1)
 
 ```
+4. Precise estimates of residual variances (small multiplicative margin of error (MMOE) around the true value)
+```
+#Eg.Sample size for margin of error of within 10% (1.0 <=MMOE <=1.1)
+# of the true value at 95% confidence level.
+ss_res_var( max_MOE=1.1, alpha=0.05)
+```
+## Example (For dichotomous outcome)
+5. To target sensitivity
+
+```
+#Eg .To target 80% sensitivity at 95% confidence level,
+# maximum margin of error 5% for a precision of 95% and
+#assuming 30% of the population with particular disease.
+ss_sens( alpha=0.05, se= 0.8, d=0.05,prev=0.3)
+
+```
+6.To target specificity
+
+```
+Eg .To target 50% specificity at 95% confidence level,
+# maximum margin of error 5% for a precision of 95% and
+# assuming 30% of the population with particular disease.
+ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
+
+```
+
