@@ -30,8 +30,7 @@ devtools::install_github("Ayushi-712/ssclip")
 library(ssclip)
 ##1. R2 :The proportion of variance explained
 
-#Eg.To target a 95% confidence interval for R2val that has a narrow width of about 0.1
-#i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
+#Eg.To target a 95% confidence interval for R2val that has a narrow width of about 0.1 i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
 
 #for different combinations of parameters one can pass a vector instead of single value.
@@ -42,26 +41,23 @@ ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
 
 ```{r example }
 
-# Eg. To target SE of CITL model of 2.55 (width = 10)at 95%
-#confidence interval , Assuming R2 CITL = R2val = 0.5 and
-# variance of the observed Yi is 400
+# Eg. To target SE of CITL model of 2.55 (width = 10)at 95% confidence interval , Assuming R2 CITL = R2val = 0.5 and variance of the observed Yi is 400
+
 ss_citl( R2= 0.5,width = 10,alpha = 0.05, varY = 400)
 
 ```
 3. Precise estimate of calibration slope
 
 ```
-# Eg. Sample size to target a 95% confidence interval for 𝜆cal
-# that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1,
-# the confidence interval would be 0.9 to 1.1 assuming confidence
-# intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5
+# Eg. Sample size to target a 95% confidence interval for 𝜆cal that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1, the confidence interval would be 0.9 to 1.1 assuming confidence intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5
+
 ss_cal_slope( R2= 0.5,width = 0.2,alpha = 0.05, lambda = 1)
 
 ```
 4. Precise estimates of residual variances (small multiplicative margin of error (MMOE) around the true value)
 ```
-#Eg.Sample size for margin of error of within 10% (1.0 <=MMOE <=1.1)
-# of the true value at 95% confidence level.
+#Eg.Sample size for margin of error of within 10% (1.0 <=MMOE <=1.1) of the true value at 95% confidence level.
+
 ss_res_var( max_MOE=1.1, alpha=0.05)
 ```
 ## Example (For dichotomous outcome)
@@ -69,8 +65,8 @@ ss_res_var( max_MOE=1.1, alpha=0.05)
 
 ```
 #Eg .To target 80% sensitivity at 95% confidence level,
-# maximum margin of error 5% for a precision of 95% and
-#assuming 30% of the population with particular disease.
+# maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
+
 ss_sens( alpha=0.05, se= 0.8, d=0.05,prev=0.3)
 
 ```
@@ -78,8 +74,8 @@ ss_sens( alpha=0.05, se= 0.8, d=0.05,prev=0.3)
 
 ```
 Eg .To target 50% specificity at 95% confidence level,
-# maximum margin of error 5% for a precision of 95% and
-# assuming 30% of the population with particular disease.
+# maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
+
 ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
 
 ```
