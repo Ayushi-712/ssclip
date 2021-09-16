@@ -66,8 +66,7 @@ ss_res_var( max_MOE=1.1, alpha=0.05)
 5. To target sensitivity
 
 ```
-#Eg .To target 80% sensitivity at 95% confidence level,
-# maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
+#Eg .To target 80% sensitivity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
 
 ss_sens( alpha=0.05, se= 0.8, d=0.05,prev=0.3)
 
@@ -75,8 +74,7 @@ ss_sens( alpha=0.05, se= 0.8, d=0.05,prev=0.3)
 6.To target specificity
 
 ```
-Eg .To target 50% specificity at 95% confidence level,
-# maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
+Eg .To target 50% specificity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
 
 ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
 
