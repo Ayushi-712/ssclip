@@ -24,6 +24,7 @@ You can install the development version from [GitHub](https://github.com/) with:
 devtools::install_github("Ayushi-712/ssclip")
 ```
 ## Example
+1. R2 :The proportion of variance explained
 
 ```{r example }
 library(ssclip)
