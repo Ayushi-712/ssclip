@@ -81,9 +81,8 @@ ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
 ```
 ## References
 
-```
 1. Archer L, Snell KIE, Ensor J, Hudda MT, Collins GS, Riley RD. Minimum sample size for external validation of a clinical prediction model with a continuous outcome. Stat Med. 2020;40:133-46.
+```
 
-2. Arenas-Cavalli JT, Abarca I, Rojas-Contreras M, Bernuy F, Donoso R. Clinical validation of an artificial intelligence-based diabetic retinopathy screening tool for a national health system. Eye (Lond). 2021 Jan 11. doi: 10.1038/s41433-020-01366-0. Epub ahead of print. Erratum in: Eye (Lond). 2021 Jul 23;: PMID: 33432168.
-
+![plot](./directory_1/directory_2/.../directory_n/plot.png)
 ```
