@@ -24,7 +24,7 @@ You can install the development version from [GitHub](https://github.com/) with:
 devtools::install_github("Ayushi-712/ssclip")
 ```
 ## Example
-1. R2 :The proportion of variance explained
+1.Precise estimate of R2val
 
 ```{r example }
 library(ssclip)
@@ -34,13 +34,27 @@ library(ssclip)
 #i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
 
-#for different combinations of parameters
+#for different combinations of parameters one can pass a vector instead of single value.
 ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
 
 ```
-1. R2 :The proportion of variance explained
+2.  Precise estimate of CITL(calibration-in-the-large)
 
 ```{r example }
 
-ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
+# Eg. To target SE of CITL model of 2.55 (width = 10)at 95%
+#confidence interval , Assuming R2 CITL = R2val = 0.5 and
+# variance of the observed Yi is 400
+ss_citl( R2= 0.5,width = 10,alpha = 0.05, varY = 400)
+
+```
+3. Precise estimate of calibration slope
+```
+
+**# Eg. Sample size to target a 95% confidence interval for 𝜆cal
+# that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1,
+# the confidence interval would be 0.9 to 1.1 assuming confidence
+# intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5 .**
+ss_cal_slope( R2= 0.5,width = 0.2,alpha = 0.05, lambda = 1)
+
 ```
