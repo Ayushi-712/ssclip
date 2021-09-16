@@ -25,7 +25,7 @@ devtools::install_github("Ayushi-712/ssclip")
 ```
 ## Examples (For continuous outcome)
 ### 1.Precise estimate of R2val
-#### Eg.To target a 95% confidence interval for R2val that has a narrow width of about 0.1 i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
+#### For Eg.Sample size to target a 95% confidence interval for R2val that has a narrow width of about 0.1 i.e SE of R2val = 0.0255 and expected R2val = 0.5.One can give parameters as R2val= 0.5,width=0.1,alpha=0.05 in the ss_R2val function.
 ```{r example }
 library(ssclip)
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
@@ -41,12 +41,12 @@ ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
 ![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/ss_R2val_diff_comb.png)
 
 ### 2.Precise estimate of CITL(calibration-in-the-large)
-#### Eg. To target SE of CITL model of 2.55 (width = 10)at 95% confidence interval , Assuming R2 CITL = R2val = 0.5 and variance of the observed Yi is 400
+#### For Eg. Sample size to target SE of CITL model of 2.55 (width = 10) at 95% confidence interval , R2 CITL = R2val = 0.5 and variance of the observed Yi = 400.
 ```{r example }
 ss_citl( R2= 0.5,width = 10,alpha = 0.05, varY = 400)
 ```
 ### 3. Precise estimate of calibration slope
-#### Eg. Sample size to target a 95% confidence interval for 𝜆cal that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1, the confidence interval would be 0.9 to 1.1 assuming confidence intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5
+#### Eg. Sample size to target a 95% confidence interval for 𝜆cal that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1, the confidence interval would be 0.9 to 1.1, confidence intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and expected R2val = 0.5
 
 ```
 ss_cal_slope( R2= 0.5,width = 0.2,alpha = 0.05, lambda = 1)
@@ -58,13 +58,13 @@ ss_res_var( max_MOE=1.1, alpha=0.05)
 ```
 ## Examples (For dichotomous outcome)
 ### 5. To target sensitivity
-#### Eg .To target 80% sensitivity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
+#### Eg .Sample size to target 80% sensitivity at 95% confidence level, maximum margin of error 5% for a precision of 95% and 30% of the population with particular disease.
 
 ```
 ss_sens( alpha=0.05, se= 0.8, d=0.05,prev=0.3)
 ```
 ### 6.To target specificity
-#### Eg .To target 50% specificity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
+#### Eg .Sample size to target 50% specificity at 95% confidence level, maximum margin of error 5% for a precision of 95% and assuming 30% of the population with particular disease.
 ```
 ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
 ```
