@@ -31,9 +31,11 @@ library(ssclip)
 ##1. R2 :The proportion of variance explained
 
 #Eg.To target a 95% confidence interval for R2val that has a narrow width of about 0.1 i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
+
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
 
 #for different combinations of parameters one can pass a vector instead of single value.
+
 ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
 
 ```
@@ -79,4 +81,11 @@ Eg .To target 50% specificity at 95% confidence level,
 ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
 
 ```
+## References
 
+```
+1. Archer L, Snell KIE, Ensor J, Hudda MT, Collins GS, Riley RD. Minimum sample size for external validation of a clinical prediction model with a continuous outcome. Stat Med. 2020;40:133-46.
+
+2. Arenas-Cavalli JT, Abarca I, Rojas-Contreras M, Bernuy F, Donoso R. Clinical validation of an artificial intelligence-based diabetic retinopathy screening tool for a national health system. Eye (Lond). 2021 Jan 11. doi: 10.1038/s41433-020-01366-0. Epub ahead of print. Erratum in: Eye (Lond). 2021 Jul 23;: PMID: 33432168.
+
+```
