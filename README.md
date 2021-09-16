@@ -51,7 +51,8 @@ ss_citl( R2= 0.5,width = 10,alpha = 0.05, varY = 400)
 3. Precise estimate of calibration slope
 ```
 
-**# Eg. Sample size to target a 95% confidence interval for 𝜆cal
+****# Eg. Sample size to target a 95% confidence interval for 𝜆cal
+**
 # that has a narrow width ≤ 0.2 (eg, if the calibration slope was 1,
 # the confidence interval would be 0.9 to 1.1 assuming confidence
 # intervals derived by 𝜆̂cal ± 1.96SE𝜆̂cal) and assuming R2val = 0.5 .**
