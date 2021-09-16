@@ -55,9 +55,9 @@ ss_citl( R2= 0.5,width = 10,alpha = 0.05, varY = 400)
 
 ss_cal_slope( R2= 0.5,width = 0.2,alpha = 0.05, lambda = 1)
 
-![Alt desc](http://www.example.com/image.png)
-
 ```
+![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/ss_cal_slope.png)
+
 4. Precise estimates of residual variances (small multiplicative margin of error (MMOE) around the true value)
 ```
 #Eg.Sample size for margin of error of within 10% (1.0 <=MMOE <=1.1) of the true value at 95% confidence level.
@@ -84,7 +84,3 @@ ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
 ## References
 
 1. Archer L, Snell KIE, Ensor J, Hudda MT, Collins GS, Riley RD. Minimum sample size for external validation of a clinical prediction model with a continuous outcome. Stat Med. 2020;40:133-46.
-```
-![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/ss_cal_slope.png)
-
-```
