@@ -43,5 +43,4 @@ ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
 ```{r example }
 
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
-
 ```
