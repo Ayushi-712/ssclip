@@ -23,7 +23,7 @@ You can install the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("Ayushi-712/ssclip")
 ```
-## Example (For continuous outcome)
+## Examples (For continuous outcome)
 1.Precise estimate of R2val
 
 ```{r example }
@@ -62,7 +62,7 @@ ss_cal_slope( R2= 0.5,width = 0.2,alpha = 0.05, lambda = 1)
 
 ss_res_var( max_MOE=1.1, alpha=0.05)
 ```
-## Example (For dichotomous outcome)
+## Examples (For dichotomous outcome)
 5. To target sensitivity
 
 ```
