@@ -82,7 +82,4 @@ ss_spec( alpha=0.05, sp= 0.5, d=0.05,prev=0.3)
 ## References
 
 1. Archer L, Snell KIE, Ensor J, Hudda MT, Collins GS, Riley RD. Minimum sample size for external validation of a clinical prediction model with a continuous outcome. Stat Med. 2020;40:133-46.
-```
 
-![plot](./directory_1/directory_2/.../directory_n/plot.png)
-```
