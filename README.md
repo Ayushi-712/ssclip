@@ -32,7 +32,6 @@ ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
 ```
 #### Output
 ![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/ss_R2val.png)
-
 #### for different combinations of parameters one can pass a vector instead of single value.
 ```
 ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
