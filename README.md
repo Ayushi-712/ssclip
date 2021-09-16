@@ -30,7 +30,10 @@ library(ssclip)
 ##1. R2 :The proportion of variance explained
 
 #Eg.To target a 95% confidence interval for R2val that has a narrow width of about 0.1
-i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
+#i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
+
+#for different combinations of parameters
+#ss_R2val( R2val= c(0.6,0.9),width=c( 0.1),alpha=c( 0.01,0.05) )
 
 ```
