@@ -29,7 +29,8 @@ devtools::install_github("Ayushi-712/ssclip")
 library(ssclip)
 ##1. R2 :The proportion of variance explained
 
-#Eg.To target a 95% confidence interval for R2val that has a narrow width of about 0.1 i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
+#Eg.To target a 95% confidence interval for R2val that has a narrow width of about 0.1
+i.e SE of R2val will be 0.0255 and assuming R2val is 0.5.
 ss_R2val( R2val= 0.5,width=0.1,alpha=0.05 )
 
 ```
