@@ -1,5 +1,5 @@
 
-# ssclip
+# Sample Size for CLInical Prediction models (ssclip)
 
 <!-- badges: start -->
 <!-- badges: end -->
