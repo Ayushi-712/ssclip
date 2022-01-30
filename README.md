@@ -24,7 +24,6 @@ install.packages("devtools")
 devtools::install_github("Ayushi-712/ssclip")
 ```
 ### Step-by-step guide
-```
 ![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/sim8766-fig-0002-m.jpg)
 ```
 ```
