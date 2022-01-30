@@ -23,6 +23,11 @@ You can install the development version from [GitHub](https://github.com/) with:
 install.packages("devtools")
 devtools::install_github("Ayushi-712/ssclip")
 ```
+### Step-by-step guide
+```
+![Alt desc](https://github.com/Ayushi-712/ssclip/blob/master/Data/sim8766-fig-0002-m.jpg)
+```
+```
 ## Examples (For continuous outcome)
 ### 1.Precise estimate of R2val
 #### For Eg.Sample size to target a 95% confidence interval for R2val that has a narrow width of about 0.1 i.e SE of R2val = 0.0255 and expected R2val = 0.5.One can give parameters as R2val= 0.5,width=0.1,alpha=0.05 in the ss_R2val function.
